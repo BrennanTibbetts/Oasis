@@ -37,7 +37,7 @@ export default class Camera {
 
     update(){
         this.controls.update()
-        this.instance.position.x = Math.sin(this.experience.time.elapsed * 0.00008 - 2) * 7
+        this.instance.position.x = -10 + Math.sin(this.experience.time.elapsed * 0.00008) * 7
         this.instance.position.z = Math.cos(this.experience.time.elapsed * 0.00008) * 7
     }
 }

@@ -3,13 +3,6 @@ import {
     Vector3
 } from 'three';
 
-/**
- * Sobel Edge Detection (see https://youtu.be/uihBwtPIBxM)
- *
- * As mentioned in the video the Sobel operator expects a grayscale image as input.
- *
- */
-
 const SobelOperatorShader = {
 
 	name: 'SobelOperatorShader',
@@ -107,6 +100,8 @@ const SobelOperatorShader = {
 
 			if (G > distanceBasedThreshold) {
 				gl_FragColor = vec4(lineColor, 1);
+				    // Sample the texture at the current UV coordinates and at several nearby coordinates
+
 			} else {
 				gl_FragColor = texture2D(tDiffuse, vUv);
 			}

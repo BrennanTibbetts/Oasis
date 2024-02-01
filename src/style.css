@@ -7,7 +7,7 @@
 html,
 body
 {
-    /* background-image: url('../static/gradient.png'); */
+    background-image: url('../static/gradient.png');
     background-color: rgb(44, 70, 82);
     background-size: 100%;
     background-repeat: no-repeat;

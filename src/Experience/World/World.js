@@ -1,6 +1,7 @@
 import Experience from "../Experience"
 import Environment from "./Environment"
 import Floor from "./Floor"
+import RockLarge1 from "./Landscape/Rocks/LargeRock1"
 import * as THREE from 'three'
 
 export default class World {
@@ -13,14 +14,17 @@ export default class World {
 
             // Setup
             this.floor = new Floor()
-
+            this.rockLarge1 = new RockLarge1()
             this.environment = new Environment()
+
         })
 
     }
 
     update(){
-        if(this.fox)
-            this.fox.update()
+
+        if(this.environment){
+            this.environment.update()
+        }
     }
 }

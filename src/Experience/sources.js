@@ -5,12 +5,12 @@ export default [
         path: 'models/orang-utan-low-poly/source/Orangutan_monkey1.glb'
     },
     {
-        name: 'rock-large-1',
+        name: 'rocklarge1',
         type: 'gltfModel',
         path: 'models/rocks/large_1.glb'
     },
     {
-        name: 'rock-small-1',
+        name: 'rocksmall1',
         type: 'gltfModel',
         path: 'models/rocks/small_1.glb'
     },

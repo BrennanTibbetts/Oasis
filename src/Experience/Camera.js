@@ -16,12 +16,12 @@ export default class Camera {
 
     setInstance(){
         this.instance = new THREE.PerspectiveCamera(
-            35, 
+            75, 
             this.sizes.width / this.sizes.height,
             0.1,
-            100,
+            180,
         )
-        this.instance.position.set(6, 4, 8)
+        this.instance.position.set(-1.7, 0.8, -1.6)
         this.scene.add(this.instance)
     }
 
@@ -37,5 +37,7 @@ export default class Camera {
 
     update(){
         this.controls.update()
+        this.instance.position.x = Math.sin(this.experience.time.elapsed * 0.00008 - 2) * 7
+        this.instance.position.z = Math.cos(this.experience.time.elapsed * 0.00008) * 7
     }
 }

@@ -87,7 +87,6 @@ export default class Floor {
         this.material = new THREE.MeshToonMaterial({
             color: this.floor.color,
             gradientMap: this.floor.gradient,
-            side: THREE.DoubleSide
         })
     }
 

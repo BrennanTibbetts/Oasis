@@ -44,7 +44,7 @@ export default class RockLarge1 {
 
         this.material = new THREE.MeshToonMaterial({
             color: 0xffaaaa,
-            gradientMap: this.gradient,
+            // gradientMap: this.gradient,
             // onBeforeCompile: shader => {
             //     shader.uniforms.topColor = { value: new THREE.Color(0x0077ff) };
             //     shader.uniforms.bottomColor = { value: new THREE.Color(0xff7700) };

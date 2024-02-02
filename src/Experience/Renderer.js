@@ -13,6 +13,7 @@ export default class Renderer {
         this.sizes = this.experience.sizes
         this.scene = this.experience.scene
         this.camera = this.experience.camera
+        this.time = this.experience.time
         this.debug = this.experience.debug
 
 
@@ -138,6 +139,11 @@ export default class Renderer {
     update() {
         this.renderSceneWithNormalMaterial()
         this.composer.render();
+
+        this.sobelEffect.uniforms['cameraPos'].value = this.camera.instance.position
+
+        let color = - Math.sin(this.time.elapsed * 0.00008)
+        this.sobelEffect.uniforms['lineColor'].value = new THREE.Vector3(color, color, color)
     }
 }
 
